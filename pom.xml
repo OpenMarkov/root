@@ -16,7 +16,6 @@
     </properties>
 
     <build>
-    <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -75,6 +74,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -87,7 +87,7 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <!-- switch on dependency-driven aggregation -->
+                            <!- switch on dependency-driven aggregation ->
                             <includeDependencySources>true</includeDependencySources>
                             <dependencySourceIncludes>
                                 <dependencySourceInclude>org.openmarkov:*</dependencySourceInclude>
@@ -96,6 +96,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -128,7 +129,6 @@
                 </executions>
             </plugin>
         </plugins>
-        </pluginManagement>
     </build>
 
     <dependencies>
@@ -215,18 +215,5 @@
             <layout>default</layout>
         </repository>
     </repositories>
-    <distributionManagement>
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>releases</id>
-            <name>Releases</name>
-            <url>http://openmarkov.org:8081/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <uniqueVersion>true</uniqueVersion>
-            <id>snapshots</id>
-            <name>Snapshots</name>
-            <url>http://openmarkov.org:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+
 </project>

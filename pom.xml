@@ -21,7 +21,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>3.1.0</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -47,7 +47,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
@@ -56,7 +56,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.5</version>
+                <version>3.0.2</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                 </configuration>
@@ -64,7 +64,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.3</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -79,7 +79,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>javadoc-jar</id>
@@ -101,7 +101,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.0.2</version>
                 <executions>
                     <execution>
                         <goals>
@@ -113,7 +113,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.1</version>
+                <version>1.8</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -152,7 +152,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.3</version>
+            <version>2.6</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -172,29 +172,29 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
-            <version>1.0.19</version>
+            <version>1.5.0</version>
         </dependency>
         <!-- Warning: Do not use a newer version of org.json as it requires Java 1.8 at least -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20140107</version>
+            <version>20171018</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.12</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
+            <version>1.2.17</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.8</version>
+            <version>3.17</version>
         </dependency>
         <dependency>
             <groupId>org.swinglabs</groupId>
@@ -207,13 +207,13 @@
         <repository>
             <id>release</id>
             <name>OpenMarkov</name>
-            <url>http://openmarkov.org:8081/nexus/content/repositories/releases</url>
+            <url>http://62.204.199.55:8081/repository/development-releases/</url>
             <layout>default</layout>
         </repository>
         <repository>
             <id>snapshots</id>
             <name>OpenMarkov Snapshots</name>
-            <url>http://openmarkov.org:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://62.204.199.55:8081/repository/development-snapshots/</url>
             <layout>default</layout>
         </repository>
     </repositories>
@@ -222,13 +222,13 @@
             <uniqueVersion>false</uniqueVersion>
             <id>releases</id>
             <name>Releases</name>
-            <url>http://openmarkov.org:8081/nexus/content/repositories/releases</url>
+            <url>http://62.204.199.55:8081/repository/development-releases/</url>
         </repository>
         <snapshotRepository>
             <uniqueVersion>true</uniqueVersion>
             <id>snapshots</id>
             <name>Snapshots</name>
-            <url>http://openmarkov.org:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://62.204.199.55:8081/repository/development-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

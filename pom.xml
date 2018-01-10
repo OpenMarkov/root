@@ -20,32 +20,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.openmarkov.full.OpenMarkov</mainClass>
-                        </manifest>
-                    </archive>
-                    <appendAssemblyId>false</appendAssemblyId>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-                <executions>
-                    <execution><!-- MLUQUE: I do not know if this block is necessary -->
-                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                        <phase>package</phase> <!-- bind to the packaging phase -->
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
@@ -53,14 +27,7 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -75,6 +42,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
             <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -98,6 +66,7 @@
                 </executions>
             </plugin>
             -->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -107,25 +76,6 @@
                         <goals>
                             <goal>test-jar</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <tasks>
-                                <echo>Displaying OpenMarkov project version</echo>
-                                <echo>Version: ${project.version}</echo>
-                            </tasks>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -208,13 +158,13 @@
         <repository>
             <id>release</id>
             <name>OpenMarkov</name>
-            <url>http://nexus.openmarkov.org/repository/development-releases/</url>
+            <url>http://62.204.199.55:8081/repository/development-releases/</url>
             <layout>default</layout>
         </repository>
         <repository>
             <id>snapshots</id>
             <name>OpenMarkov Snapshots</name>
-            <url>http://nexus.openmarkov.org/repository/development-snapshots/</url>
+            <url>http://62.204.199.55:8081/repository/development-snapshots/</url>
             <layout>default</layout>
         </repository>
     </repositories>
@@ -223,13 +173,13 @@
             <uniqueVersion>false</uniqueVersion>
             <id>releases</id>
             <name>Releases</name>
-            <url>http://nexus.openmarkov.org/repository/development-releases/</url>
+            <url>http://62.204.199.55:8081/repository/development-releases/</url>
         </repository>
         <snapshotRepository>
             <uniqueVersion>true</uniqueVersion>
             <id>snapshots</id>
             <name>Snapshots</name>
-            <url>http://nexus.openmarkov.org/repository/development-snapshots/</url>
+            <url>http://62.204.199.55:8081/repository/development-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

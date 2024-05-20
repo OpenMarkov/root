@@ -177,13 +177,13 @@
         <repository>
             <id>development-releases</id>
             <name>Releases</name>
-            <url>http://62.204.199.21:8081/repository/development-releases/</url>
+            <url>https://nexus.openmarkov.org/repository/development-releases/</url>
             <layout>default</layout>
         </repository>
         <repository>
             <id>development-snapshots</id>
             <name>Snapshots</name>
-            <url>http://62.204.199.21:8081/repository/development-snapshots/</url>
+            <url>https://nexus.openmarkov.org/repository/development-snapshots/</url>
             <layout>default</layout>
         </repository>
     </repositories>
@@ -192,13 +192,13 @@
             <uniqueVersion>false</uniqueVersion>
             <id>development-releases</id>
             <name>Releases</name>
-            <url>http://62.204.199.21:8081/repository/development-releases/</url>
+            <url>https://nexus.openmarkov.org/repository/development-releases/</url>
         </repository>
         <snapshotRepository>
             <uniqueVersion>true</uniqueVersion>
             <id>development-snapshots</id>
             <name>Snapshots</name>
-            <url>http://62.204.199.21:8081/repository/development-snapshots/</url>
+            <url>https://nexus.openmarkov.org/repository/development-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

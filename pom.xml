@@ -40,7 +40,7 @@
                             </path>
                         </annotationProcessorPaths>
                         <annotationProcessors>
-                            <annotationProcessor>org.openmarkov.annotation_processing.localization_bindings.BindXMLProcessor</annotationProcessor>
+                            <annotationProcessor>org.openmarkov.annotation_processing.localization_bindings.BindLocalizationsProcessor</annotationProcessor>
                         </annotationProcessors>
                     </configuration>
                 </plugin>

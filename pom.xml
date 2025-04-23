@@ -44,6 +44,7 @@
                         </annotationProcessors>
                     </configuration>
                 </plugin>
+                <!--
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -56,7 +57,9 @@
                                 <goal>jar</goal>
                             </goals>
                             <configuration>
+                -->
                                 <!-- switch on dependency-driven aggregation -->
+                <!--
                                 <includeDependencySources>true</includeDependencySources>
                                 <dependencySourceIncludes>
                                     <dependencySourceInclude>org.openmarkov:*</dependencySourceInclude>
@@ -65,6 +68,7 @@
                         </execution>
                     </executions>
                 </plugin>
+                -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>

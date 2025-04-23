@@ -40,7 +40,7 @@
                             </path>
                         </annotationProcessorPaths>
                         <annotationProcessors>
-                            <annotationProcessor>org.openmarkov.annotation_processing.localization_bindings.BindLocalizationsProcessor</annotationProcessor>
+                            <annotationProcessor>org.openmarkov.annotation_processing.localization_bindings.BindXMLProcessor</annotationProcessor>
                         </annotationProcessors>
                     </configuration>
                 </plugin>
@@ -92,7 +92,7 @@
             <groupId>org.openmarkov</groupId>
             <artifactId>org.openmarkov.annotation_processing</artifactId>
             <version>0.3.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.antlr</groupId>

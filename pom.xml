@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.openmarkov</groupId>
-    <artifactId>org.openmarkov</artifactId>
+    <artifactId>root</artifactId>
     <version>0.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>openmarkov</name>
@@ -11,8 +11,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--<additionalparam>-Xdoclint:none</additionalparam>-->
         <openmarkov.version>0.3.0-SNAPSHOT</openmarkov.version>
-        <maven.compiler.target>21</maven.compiler.target>
-        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
     </properties>
     <build>
         <pluginManagement>
@@ -85,6 +85,29 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.pitest</groupId>
+                    <artifactId>pitest-maven</artifactId>
+                    <version>1.17.3</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.pitest</groupId>
+                            <artifactId>pitest-junit5-plugin</artifactId>
+                            <version>1.2.0</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.junit.platform</groupId>
+                            <artifactId>junit-platform-launcher</artifactId>
+                            <version>1.13.0</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <mutators>DEFAULTS</mutators>
+                        <outputFormats>
+                            <outputFormat>HTML</outputFormat>
+                        </outputFormats>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
@@ -162,7 +185,17 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.18.0</version>
+            <version>3.20.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javers</groupId>
+            <artifactId>javers-core</artifactId>
+            <version>7.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.17</version>
         </dependency>
         <dependency>
             <groupId>org.jdom</groupId>
@@ -202,6 +235,20 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>net.jqwik</groupId>
+            <artifactId>jqwik</artifactId>
+            <version>1.9.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-swing</artifactId>
+            <version>3.17.1</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.25.3</version>
@@ -224,7 +271,7 @@
         <dependency>
             <groupId>io.github.classgraph</groupId>
             <artifactId>classgraph</artifactId>
-            <version>4.8.179</version>
+            <version>4.8.184</version>
         </dependency>
         <dependency>
             <groupId>com.google.auto.service</groupId>
@@ -245,7 +292,7 @@
         <dependency>
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf</artifactId>
-            <version>3.6.1</version>
+            <version>3.7.1</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
